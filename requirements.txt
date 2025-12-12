@@ -1,0 +1,9 @@
+snscrape @ git+https://github.com/JustAnotherArchivist/snscrape.git
+vaderSentiment
+streamlit
+pandas
+sqlalchemy
+python-dotenv
+plotly
+wordcloud
+matplotlib
