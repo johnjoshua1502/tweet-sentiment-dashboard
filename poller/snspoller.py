@@ -1,12 +1,12 @@
 # poller/snspoller.py
+import os
 import tweepy
 import sqlite3
 from datetime import datetime
 import time
 from textblob import TextBlob
-import logging
 from dotenv import load_dotenv
-import os
+import logging
 
 # -------- Logging --------
 logging.basicConfig(
@@ -108,6 +108,7 @@ def poll_once():
         except Exception as e:
             logging.error(f"Unexpected error: {e}")
             print(f"Unexpected error: {e}")
+
 
 # -------- Main Loop --------
 if __name__ == "__main__":
