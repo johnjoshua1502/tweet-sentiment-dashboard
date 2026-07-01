@@ -39,6 +39,12 @@ Includes:
 - Prevents duplicate insertion  
 - Stores tweet text, timestamp, sentiment score, and label  
 
+### ✅ CSV Review Mode
+- Upload a local tweet CSV directly in the dashboard
+- Accepts common text columns such as `text`, `tweet`, or `tweet_text`
+- Reuses existing labels when present, or scores tweets with TextBlob
+- Keeps reviewed TweetClaw or OpenClaw export checks local to the dashboard
+
 ### ✅ Secure Credentials  
 - `.env` keeps API secrets private  
 - `.gitignore` ensures your token & database stay out of GitHub  
@@ -61,6 +67,7 @@ Includes:
 ### 3. Dashboard (`dashboard.py`)
 - Shows analysis in real-time  
 - Uses Streamlit for interactive visuals  
+- Can inspect an uploaded CSV when you do not want to start the poller
 
 ---
 
@@ -112,6 +119,14 @@ Ensure `.gitignore` contains:
 
 ### 7. Run the dashboard  
 
+### 8. Analyze a local CSV export
+
+Open the dashboard, choose **Upload CSV** in the sidebar, then upload a file
+with a `text`, `tweet`, `tweet_text`, `content`, or `message` column.
+
+Optional columns include `username`, `created_at`, `sentiment`, `score`, and
+`label`. Missing sentiment values are scored locally with TextBlob.
+
 ---
 
 # 🌩 Deploying on AWS EC2 (Simple Guide)
@@ -160,7 +175,6 @@ This project shows real, practical skills in:
 - Deployment-ready coding  
 
 Perfect for showcasing as a **BCA 2024 graduate project**, especially with a career gap — shows dedication, technical ability, and initiative.
-
 
 
 
